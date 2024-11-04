@@ -1,0 +1,12 @@
+<div class="imp-links">
+    <a *ngFor="let link of impLinks" [href]="link.url">
+        <i [ngClass]="link.icon">{{ link.label }}</i>
+    </a>
+</div>
+
+<div class="shortcut-links">
+    <p>Your Shortcuts</p>
+    <a *ngFor="let shortcut of shortcutLinks" [href]="shortcut.url">
+        <img [src]="shortcut.imgUrl" alt="">{{ shortcut.label }}
+    </a>
+</div>

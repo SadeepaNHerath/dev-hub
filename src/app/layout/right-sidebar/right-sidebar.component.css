@@ -1,0 +1,89 @@
+.sidebar-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.right-sidebar h4 {
+    font-weight: 600;
+    font-size: 0.5rem;
+}
+
+.sidebar-title a {
+    text-decoration: none;
+    color: #1876f2;
+    font-size: 0.625rem;
+}
+
+.event {
+    display: flex;
+    font-size: 0.5rem;
+    margin-bottom: 0.6rem;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.event .left-event {
+    border-radius: 0.625rem;
+    height: 4.0625rem;
+    width: 4.0625rem;
+    margin-right: 0.9375rem;
+    padding-top: 0.625rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+}
+
+.event p,
+.event a {
+    font-size: 0.8rem;
+}
+
+.event a {
+    text-decoration: none;
+    color: #1876f2;
+}
+
+.left-event span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--nav-color);
+    color: var(--bg-color);
+    font-size: 0.625rem;
+    padding: 0.25rem 0;
+}
+
+.sidebar-ads {
+    width: 100%;
+    margin-bottom: 1.25rem;
+    border-radius: 0.25rem;
+}
+
+.online-list {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+.online-list .online {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    margin-right: 0.9375rem;
+    overflow: hidden;
+}
+
+.online-list .online img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.online-list .online::after {
+    top: unset;
+    bottom: 0.3125rem;
+}

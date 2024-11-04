@@ -1,0 +1,66 @@
+<div class="story-gallery">
+    <div class="story">
+        <img src="img/upload.png" class="custom-icon" alt="Upload icon">
+        <p>Post Story</p>
+    </div>
+    <div class="story" *ngFor="let user of onlineUsers">
+        <img [src]="user.image" alt="User profile">
+        <p>{{ user.name }}</p>
+    </div>
+</div>
+
+<div class="write-post-container">
+    <div class="user-profile">
+        <img src="img/profile-pic.png" alt="Profile picture">
+        <div>
+            <p>Sadeepa Herath</p>
+            <small>Public <i class="bi bi-caret-down-fill"></i></small>
+        </div>
+    </div>
+
+    <div class="post-input-container">
+        <textarea rows="3" placeholder="What's on your mind, Sadeepa?"></textarea>
+        <div class="add-post-links">
+            <a href="#"><img src="img/live.png" alt="Live icon">Live Video</a>
+            <a href="#"><img src="img/picture.png" alt="Photo icon">Photo/Video</a>
+            <a href="#"><img src="img/emotional.png" alt="Emotional icon">Feeling/Activity</a>
+        </div>
+    </div>
+</div>
+
+<div class="post-container" *ngFor="let post of posts">
+    <div class="post-row">
+        <div class="user-profile">
+            <img [src]="post.userImage" alt="User profile">
+            <div>
+                <p>{{ post.userName }}</p>
+                <span>{{ post.date }}</span>
+            </div>
+        </div>
+        <a href="#"><i class="bi bi-three-dots-vertical"></i></a>
+    </div>
+
+    <p class="post-text">
+        {{ post.text }}
+
+        <span *ngFor="let mention of post.mentions">&#64;{{ mention }} </span>
+        <ng-container *ngFor="let hashtag of post.hashtags">
+            <a href="#">&#35;{{ hashtag }}</a>
+        </ng-container>
+    </p>
+
+    <img [src]="post.image" class="post-img" alt="Post image">
+    
+    <div class="post-row">
+        <div class="activity-icons">
+            <div><img src="img/facebook-reactions.png" alt="Like"> {{ post.likes }}</div>
+            <div><img src="img/chat.png" alt="Comment"> {{ post.comments }}</div>
+            <div><img src="img/share.png" alt="Share"> {{ post.shares }}</div>
+        </div>
+        <div class="post-profile-icon">
+            <img src="img/profile-pic.png" alt="Profile picture"> <i class="bi bi-caret-down-fill"></i>
+        </div>
+    </div>
+</div>
+
+<button type="button" class="load-more-button">Load More</button>
